@@ -1,2 +1,122 @@
-<h1>Deployed Automatically via Ansible!</h1>
-<p>Server: Ubuntu 24.04 | Managed from Mac</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hosted on 192.168.64.2 — Salar Al-Zerki</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --text: #e8eef6;
+      --muted: #8b9cb3;
+      --accent: #3dbe8a;
+      --line: #2a384c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top, #1c2a3a 0%, var(--bg) 55%);
+      color: var(--text);
+      padding: 2rem 1rem;
+    }
+
+    main {
+      width: min(640px, 100%);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    p.kicker {
+      font-family: system-ui, sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    p.lead {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    dl {
+      display: grid;
+      gap: 0.85rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.5rem;
+    }
+
+    div.row {
+      display: grid;
+      grid-template-columns: 7rem 1fr;
+      gap: 1rem;
+      align-items: baseline;
+    }
+
+    dt {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    dd {
+      font-size: 1.05rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="kicker">Server status</p>
+    <h1>This page is live on my server.</h1>
+    <p class="lead">
+      This HTML file is hosted and deployed on my server at
+      <code>192.168.64.2</code>. I am Salar Al-Zerki, the owner of this project.
+    </p>
+    <dl>
+      <div class="row">
+        <dt>Host</dt>
+        <dd><code>192.168.64.2</code></dd>
+      </div>
+      <div class="row">
+        <dt>Owner</dt>
+        <dd>Salar Al-Zerki</dd>
+      </div>
+      <div class="row">
+        <dt>Status</dt>
+        <dd>Deployed</dd>
+      </div>
+    </dl>
+  </main>
+</body>
+</html>
