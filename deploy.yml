@@ -1,0 +1,13 @@
+---
+- name: Deploy Website via Docker
+  hosts: servers
+  tasks:
+    - name: Copy website files to server
+      copy:
+        src: ./website/
+        dest: /home/clexsvr/web-app/
+
+    - name: Recreate Docker Compose stack cleanly
+      shell: docker compose down --remove-orphans && docker compose up -d
+      args:
+        chdir: /home/clexsvr/web-app

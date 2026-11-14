@@ -1,0 +1,27 @@
+---
+- name: Server Maintenance and Service Check
+  hosts: servers
+  become: yes
+  tasks:
+    - name: Update apt cache and upgrade packages
+      apt:
+        update_cache: yes
+        upgrade: safe
+
+    - name: Ensure essential tools and security packages are installed
+      apt:
+        name:
+          - curl
+          - htop
+          - git
+          - fail2ban
+        state: present
+
+    - name: Ensure Docker and Fail2Ban services are running
+      service:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
+      loop:
+        - docker
+        - fail2ban
